@@ -1,0 +1,144 @@
+*** Services (with Capabilities) ***
+{
+  "GetServicesResponse": {
+    "Service": [
+      {
+        "Namespace": "http://www.onvif.org/ver10/device/wsdl",
+        "XAddr": "http://192.168.178.52:8899/onvif/device_service",
+        "Capabilities": {
+          "Capabilities": {
+            "Network": {
+              "$": {
+                "IPFilter": "false",
+                "ZeroConfiguration": "false",
+                "IPVersion6": "false",
+                "DynDNS": "false",
+                "Dot11Configuration": "false",
+                "Dot1XConfigurations": "0",
+                "HostnameFromDHCP": "false",
+                "NTP": "0",
+                "DHCPv6": "false"
+              }
+            },
+            "Security": {
+              "$": {
+                "TLS1.0": "false",
+                "TLS1.1": "false",
+                "TLS1.2": "false",
+                "OnboardKeyGeneration": "false",
+                "AccessPolicyConfig": "false",
+                "DefaultAccessPolicy": "false",
+                "Dot1X": "false",
+                "RemoteUserHandling": "false",
+                "X.509Token": "false",
+                "SAMLToken": "false",
+                "KerberosToken": "false",
+                "UsernameToken": "true",
+                "HttpDigest": "false",
+                "RELToken": "false",
+                "SupportedEAPMethods": "0"
+              }
+            },
+            "System": {
+              "$": {
+                "DiscoveryResolve": "false",
+                "DiscoveryBye": "false",
+                "RemoteDiscovery": "false",
+                "SystemBackup": "false",
+                "SystemLogging": "false",
+                "FirmwareUpgrade": "false",
+                "HttpFirmwareUpgrade": "false",
+                "HttpSystemBackup": "false",
+                "HttpSystemLogging": "false",
+                "HttpSupportInformation": "false"
+              }
+            }
+          }
+        },
+        "Version": {
+          "Major": "2",
+          "Minor": "41"
+        }
+      },
+      {
+        "Namespace": "http://www.onvif.org/ver10/media/wsdl",
+        "XAddr": "http://192.168.178.52:8899/onvif/Media",
+        "Capabilities": {
+          "Capabilities": {
+            "$": {
+              "SnapshotUri": "true",
+              "Rotation": "false"
+            },
+            "ProfileCapabilities": {
+              "$": {
+                "MaximumNumberOfProfiles": "24"
+              }
+            },
+            "StreamingCapabilities": {
+              "$": {
+                "RTPMulticast": "false",
+                "RTP_TCP": "true",
+                "RTP_RTSP_TCP": "true",
+                "NonAggregateControl": "false"
+              }
+            }
+          }
+        },
+        "Version": {
+          "Major": "2",
+          "Minor": "41"
+        }
+      },
+      {
+        "Namespace": "http://www.onvif.org/ver10/events/wsdl",
+        "XAddr": "http://192.168.178.52:8899/onvif/Events",
+        "Capabilities": {
+          "Capabilities": {
+            "$": {
+              "WSSubscriptionPolicySupport": "false",
+              "WSPullPointSupport": "false",
+              "WSPausableSubscriptionManagerInterfaceSupport": "false",
+              "MaxNotificationProducers": "5",
+              "MaxPullPoints": "5"
+            }
+          }
+        },
+        "Version": {
+          "Major": "2",
+          "Minor": "41"
+        }
+      },
+      {
+        "Namespace": "http://www.onvif.org/ver20/imaging/wsdl",
+        "XAddr": "http://192.168.178.52:8899/onvif/Imaging",
+        "Capabilities": {
+          "Capabilities": {
+            "$": {
+              "ImageStabilization": "false"
+            }
+          }
+        },
+        "Version": {
+          "Major": "2",
+          "Minor": "41"
+        }
+      },
+      {
+        "Namespace": "http://www.onvif.org/ver20/ptz/wsdl",
+        "XAddr": "http://192.168.178.52:8899/onvif/PTZ",
+        "Capabilities": {
+          "Capabilities": {
+            "$": {
+              "tt:EFlip": "false",
+              "tt:Reverse": "false"
+            }
+          }
+        },
+        "Version": {
+          "Major": "2",
+          "Minor": "41"
+        }
+      }
+    ]
+  }
+}

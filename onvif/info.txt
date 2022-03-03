@@ -1,0 +1,77 @@
+https://github.com/futomi/node-onvif
+
+
+{
+  "Manufacturer": "H264",
+  "Model": "XM530_R80X20-PQ_8M",
+  "FirmwareVersion": "V5.00.R02.00030695.10010.343106..ONVIF 2.41",
+  "SerialNumber": "6c6b586472348c7e",
+  "HardwareId": "00001"
+}
+
+
+{
+  "token": "000",
+  "name": "Profile_000",
+  "snapshot": "http://192.168.178.52/webcapture.jpg?command=snap&channel=1&user=admin&password=tlJwpbo6 ",
+  "stream": {
+    "udp": "rtsp://192.168.178.52:554/user=admin_password=tlJwpbo6_channel=1_stream=0.sdp?real_stream",
+    "http": "rtsp://192.168.178.52:554/user=admin_password=tlJwpbo6_channel=1_stream=0.sdp?real_stream",
+    "rtsp": "rtsp://192.168.178.52:554/user=admin_password=tlJwpbo6_channel=1_stream=0.sdp?real_stream"
+  },
+  "video": {
+    "source": {
+      "token": "000",
+      "name": "VideoS_000",
+      "bounds": {
+        "width": 1920,
+        "height": 1080,
+        "x": 0,
+        "y": 0
+      }
+    },
+    "encoder": {
+      "token": "000",
+      "name": "VideoE_000",
+      "resolution": {
+        "width": 1920,
+        "height": 1080
+      },
+      "quality": 3,
+      "framerate": 12,
+      "bitrate": 2560,
+      "encoding": "H264"
+    }
+  },
+  "audio": {
+    "source": {
+      "token": "000",
+      "name": "Audio_000"
+    },
+    "encoder": {
+      "token": "000",
+      "name": "AudioE_000",
+      "bitrate": 64,
+      "samplerate": 8,
+      "encoding": "G711"
+    }
+  },
+  "ptz": {
+    "range": {
+      "x": {
+        "min": -1,
+        "max": 1
+      },
+      "y": {
+        "min": -1,
+        "max": 1
+      },
+      "z": {
+        "min": -1,
+        "max": 1
+      }
+    }
+  }
+}
+
+
