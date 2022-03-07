@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webcam</title>
+  </head>
+  <body>
+    <img src='snapshot.jpg' onload='reloadImage(this, 2*60*1000);'>
+    <script>
+      function reloadImage(img, timeout) {
+        // console.log('start image reload timer');
+        let src = img.src;
+        setTimeout(() => {
+          // console.log('timer -> reload image');
+          fetch(img.src, {cache: 'reload', mode: 'no-cors'})
+            .then(() => img.src = src)
+        }, timeout);
+      }
+    </script>
+  </body>
+</html>

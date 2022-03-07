@@ -3,6 +3,8 @@
 This project provides a script to capture a picture from an IP webcam, annotate it with a timestamp and upload it to an FTP server.
 The script does also store a copy of each captured picture in subfolder `capture`, for the aim of a time lapse video.
 
+In [html/index.html](html/index.html) you can find an example for html website that cyclically reloads the picture.
+
 
 ## Camera
 
@@ -83,8 +85,32 @@ ffmpeg -framerate 12 -pattern_type glob -i "snapshot_*.jpg" timelapse.mp4
 
 
 
+# Cronjob
+
+To execute the script cyclically you can use linux's cronjob. Therefore execute the following command to add a new job to the cron table:
+```
+crontab -e
+```
+
+For example add the following line to the table to execute the script every 5 minutes:
+```
+*/5 * * * * ~/cacau.sh
+```
+
+The following A more sophisticated example executes the script 
+- from monday (1) to friday (5), from 17 to 23 o'clock, every 5 minutes.
+- and on saturday(6) .. sunday(0), from 13 to 23 o'clock, every 5
+
+```
+*/5 17-23 * * 1-5 ~/cacau.sh
+*/5 13-23 * * 6,0 ~/cacau.sh
+```
+
+
 # Related Resources
 - https://github.com/futomi/node-onvif
 - https://gist.github.com/gabonator/3d2bc36e9eb62c52742d45113126c1ba
 
 
+https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+https://stackoverflow.com/questions/1077041/refresh-image-with-a-new-one-at-the-same-url   (see You can simply use fetch with the cache option set to 'reload' to update the cache:)
