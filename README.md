@@ -112,5 +112,3 @@ The following A more sophisticated example executes the script
 - https://gist.github.com/gabonator/3d2bc36e9eb62c52742d45113126c1ba
 
 
-https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
-https://stackoverflow.com/questions/1077041/refresh-image-with-a-new-one-at-the-same-url   (see You can simply use fetch with the cache option set to 'reload' to update the cache:)
