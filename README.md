@@ -84,10 +84,24 @@ ffmpeg -framerate 12 -pattern_type glob -i "snapshot_*.jpg" timelapse.mp4
 ```
 
 
+# Run script
+
+One possibility to execute the script cyclically is as simple as the following snippet (see also [run.sh](run.sh)):
+
+```
+#!/bin/bash
+#Infinite loop, executed every 5 minutes. Hit CTRL+C to stop
+for (( ; ; ))
+do
+   ./cacau.sh
+   sleep 5m
+done
+```
+
 
 # Cronjob
 
-To execute the script cyclically you can use linux's cronjob. Therefore execute the following command to add a new job to the cron table:
+Another option to execute the script cyclically is the use linux's cronjob. Therefore execute the following command to add a new job to the cron table:
 ```
 crontab -e
 ```
